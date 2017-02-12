@@ -6,7 +6,8 @@ function PollListCtrl($scope, Poll) {
 // Controller for an individual poll
 function PollItemCtrl($scope, $routeParams, socket, Poll) {	
 	$scope.poll = Poll.get({pollId: $routeParams.pollId});
-	console.log(poll._id);
+	console.log('pregunta');
+console.log(poll.question);
 
 	socket.on('myvote', function(data) {
 		console.dir(data);
